@@ -10,18 +10,7 @@ env:
   - BUILD_TYPE="Debug" WITH_BFD="yes" WITH_CSYMPY_ASSERT="yes" WITH_CSYMPY_RCP="yes"
   # Debug build with BFD off:
   - BUILD_TYPE="Debug" WITH_CSYMPY_RCP="yes"
-  # Release build:
-  - BUILD_TYPE="Release" WITH_BFD="yes" WITH_CSYMPY_RCP="yes"
-  # Debug build with Teuchos::RCP (just to test that it compiles)
-  - BUILD_TYPE="Debug" WITH_BFD="yes" WITH_CSYMPY_ASSERT="yes"
-
-  #### In-tree builds:
-  # Debug build (just to check that it works):
-  - BUILD_TYPE="Debug" WITH_BFD="yes" TEST_IN_TREE="yes" WITH_CSYMPY_RCP="yes"
-  # Python build (currently only works in-tree):
-  - BUILD_TYPE="Debug" WITH_BFD="yes" TEST_IN_TREE="yes" WITH_PYTHON="yes" WITH_CSYMPY_ASSERT="yes" WITH_CSYMPY_RCP="yes"
-  # Python release build
-  - BUILD_TYPE="Release" WITH_BFD="no" TEST_IN_TREE="yes" WITH_PYTHON="yes" WITH_CSYMPY_RCP="yes"
+ 
 matrix:
   include:
     - python: 2.6
