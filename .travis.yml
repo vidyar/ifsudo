@@ -7,9 +7,9 @@ env:
   # Debug build:
   - BUILD_TYPE="Debug" WITH_BFD="yes" WITH_CSYMPY_RCP="yes"
   # Debug build with CSYMPY_ASSERT on
-  - BUILD_TYPE="Debug" WITH_BFD="yes" WITH_CSYMPY_ASSERT="yes" WITH_CSYMPY_RCP="yes"
+  #- BUILD_TYPE="Debug" WITH_BFD="yes" WITH_CSYMPY_ASSERT="yes" WITH_CSYMPY_RCP="yes"
   # Debug build with BFD off:
-  - BUILD_TYPE="Debug" WITH_CSYMPY_RCP="yes"
+  #- BUILD_TYPE="Debug" WITH_CSYMPY_RCP="yes"
  
 matrix:
   include:
@@ -48,7 +48,7 @@ before_script:
   - cmake -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DWITH_BFD=${WITH_BFD} -DWITH_PYTHON=${WITH_PYTHON} -DWITH_CSYMPY_ASSERT=${WITH_CSYMPY_ASSERT} -DWITH_CSYMPY_RCP=${WITH_CSYMPY_RCP} -DWITH_ECM=${WITH_ECM} ${SOURCE_DIR}
   - make
 script:
-  - $./bin/test_travis.sh
+  - ./bin/test_travis.sh
 
 notifications:
   email: false
