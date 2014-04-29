@@ -30,8 +30,9 @@ before_install:
     fi
   - if [[ "${WITH_ECM}" == "yes" ]]; then
         sudo apt-get install libecm-dev;
-    fi sudo apt-get install cmake
-  -   
+    fi 
+  -  sudo apt-get install cmake
+     
 install:
   - if [[ "${WITH_PYTHON}" == "yes" ]]; then
         pip install cython sympy --use-mirrors;
