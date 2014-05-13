@@ -10,7 +10,6 @@ env:
   #- BUILD_TYPE="Debug" WITH_BFD="yes" WITH_CSYMPY_ASSERT="yes" WITH_CSYMPY_RCP="yes"
   # Debug build with BFD off:
   #- BUILD_TYPE="Debug" WITH_CSYMPY_RCP="yes"
- 
 matrix:
   include:
     - python: 2.6
