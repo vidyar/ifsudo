@@ -11,9 +11,9 @@ env:
   #- BUILD_TYPE="Debug" WITH_CSYMPY_RCP="yes"
 matrix:
   include:
-    - python: 2.6
-      env:
-        - BUILD_TYPE="Release" TEST_IN_TREE="yes" WITH_PYTHON="yes" WITH_CSYMPY_RCP="yes" WITH_ECM="yes"
+   # - python: 2.6
+    #  env:
+     #   - BUILD_TYPE="Release" TEST_IN_TREE="yes" WITH_PYTHON="yes" WITH_CSYMPY_RCP="yes" WITH_ECM="yes"
     - python: 3.2
       env:
         - BUILD_TYPE="Release" TEST_IN_TREE="yes" WITH_PYTHON="yes" WITH_CSYMPY_RCP="yes" WITH_ECM="yes"
